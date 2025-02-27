@@ -42,4 +42,9 @@
   roles:
     - sample
 
+- name: Demo on register variables
+  hosts: all
+  tasks:
+    - name: Run uptime shell command
+      ansible.builtin.shell: uptime
 
