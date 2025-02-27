@@ -4,7 +4,7 @@
     URL: play_example.com
     tasks:
       - name: Print URL
-        ansible.builtin-debug:
+        ansible.builtin.debug:
           msg: URL - {{URL}}
 
 # In Ansible variable will be accessed using {{ }} ,
