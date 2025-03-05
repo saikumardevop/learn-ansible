@@ -1,10 +1,10 @@
-- name: Demo on Loops
+- name: Looping through items
   hosts: localhost
-  connection: local
   tasks:
-    - name: Demo task for loop
+    - name: Print each item with debug
       ansible.builtin.debug:
-        msg: Friut Name - {{ item }}
-      loops:
-        - apple
-        - banana
+        msg: "{{ item }}"
+      loop:
+        - "Apple"
+        - "Banana"
+        - "Cherry"
