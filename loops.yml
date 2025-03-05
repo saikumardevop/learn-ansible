@@ -7,4 +7,10 @@
       loop:
         - "Apple"
         - "Banana"
-        - "Cherry"
+
+- name: Demo tasks for loop
+  ansible.builtin.debug:
+    msg: Friut Name - {{ item.name }}, Quantity - {{ item.quantity }}, {{item.name }}
+  loop:
+    - {name: Apple,quantity: 10}
+    - {name: {Banana, quantity: 20}
